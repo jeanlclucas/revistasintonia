@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const dataElement = document.querySelector(".data");
-  if (dataElement) {
-    const hoje = new Date();
-    const options = { day: "2-digit", month: "long", year: "numeric" };
-    dataElement.textContent = hoje.toLocaleDateString("pt-BR", options);
-  }
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.querySelector(".navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
 });

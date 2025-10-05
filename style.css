@@ -220,3 +220,150 @@ img {
   max-height: 300px;
   object-fit: cover;
 }
+
+/* Garante que tudo respeite o tamanho da tela */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* As imagens nunca vão estourar a tela */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== CARDS DE NOTÍCIAS ===== */
+.noticia-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+/* Imagem principal da notícia */
+.img-noticia {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* ===== LISTA DE SHOWS ===== */
+.lista-shows {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas no PC */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.show-item {
+  display: flex;
+  align-items: center;
+  background: var(--branco);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  gap: 15px;
+}
+
+.img-artista {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVIDADE PARA CELULAR ===== */
+@media (max-width: 768px) {
+  /* Notícia em formato 1 coluna */
+  .noticia-card {
+    flex-direction: column;
+  }
+
+  /* Shows em apenas 1 coluna */
+  .lista-shows {
+    grid-template-columns: 1fr;
+  }
+
+  .show-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-artista {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* ===== MENU ===== */
+.navbar {
+  background: var(--vermelho-cereja);
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #ffd6d6;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--vermelho-cereja);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  .navbar.active .menu {
+    display: flex;
+  }
+}
