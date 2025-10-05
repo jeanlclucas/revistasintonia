@@ -202,3 +202,21 @@ footer {
   margin: 5px 0 0;
   color: var(--cinza-medio);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-artista {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.img-noticia {
+  max-height: 300px;
+  object-fit: cover;
+}
