@@ -6,6 +6,8 @@
   --cinza-escuro: #1f1f1f;
   --branco: #fff;
   --cinza-medio: #555;
+  --preto-flamengo: #000000;
+  --dourado-flamengo: #f4c542;
 }
 
 body {
@@ -14,13 +16,14 @@ body {
   background: var(--cinza-claro);
   color: var(--cinza-escuro);
   line-height: 1.6;
+  padding: 0;
 }
 
 /* ===== CABEÇALHO ===== */
 header {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(135deg, var(--vermelho-cereja), #a30224);
+  background: linear-gradient(135deg, var(--preto-flamengo), var(--vermelho-cereja));
   color: var(--branco);
 }
 
@@ -32,6 +35,8 @@ header .logo img {
 header h1 {
   font-size: 2rem;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 header .tagline {
@@ -40,7 +45,20 @@ header .tagline {
   margin-top: 5px;
 }
 
-/* ===== NAVEGAÇÃO ===== */
+/* Selo especial Flamengo */
+.flamengo-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--preto-flamengo), var(--vermelho-cereja));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== NAVEGAÇÃO PADRÃO (páginas internas) ===== */
 nav {
   position: sticky;
   top: 0;
@@ -73,7 +91,7 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* ===== CONTEÚDO ===== */
+/* ===== CONTEÚDO GERAL ===== */
 main {
   padding: 30px 20px;
   max-width: 1100px;
@@ -98,23 +116,67 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* ===== IMAGENS ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Imagens das notícias – maiores e sem corte */
+.noticia-card img,
 .img-noticia {
   width: 100%;
+  height: auto;
+  max-height: 500px;         /* Ajusta aqui se quiser menor/maior */
   border-radius: 12px;
   margin: 15px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--cinza-escuro);
-  color: var(--branco);
-  margin-top: 30px;
-  font-size: 0.9rem;
+/* Imagens dos artistas (shows) */
+.img-artista {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* ===== DESTAQUE FLAMENGO ===== */
+.noticia-flamengo {
+  border-left: 5px solid var(--vermelho-cereja);
+  position: relative;
+  overflow: hidden;
+}
+
+.noticia-flamengo::before {
+  content: "Edição especial Flamengo";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lista-elenco {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--cinza-medio);
+}
+
+.lista-elenco li {
+  margin-bottom: 4px;
+}
+
+/* ===== CARDS DE NOTÍCIAS ===== */
 .noticia-card {
   display: flex;
   flex-direction: column;
@@ -129,12 +191,6 @@ footer {
 .noticia-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-.noticia-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
 }
 
 .conteudo-noticia {
@@ -167,6 +223,14 @@ footer {
   background: #a30224;
 }
 
+/* Notícias simples (texto) */
+.noticia-principal,
+.outra-noticia {
+  background: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 /* ===== LISTA DE SHOWS ===== */
 .lista-shows {
   display: grid;
@@ -185,14 +249,6 @@ footer {
   gap: 15px;
 }
 
-.img-artista {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
 .show-item h3 {
   margin: 0;
   color: var(--vermelho-cereja);
@@ -203,107 +259,22 @@ footer {
   color: var(--cinza-medio);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--cinza-escuro);
+  color: var(--branco);
+  margin-top: 30px;
+  font-size: 0.9rem;
 }
 
-.img-artista {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.img-noticia {
-  max-height: 300px;
-  object-fit: cover;
-}
-
-/* Garante que tudo respeite o tamanho da tela */
+/* ===== RESET GERAL ===== */
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* As imagens nunca vão estourar a tela */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ===== CARDS DE NOTÍCIAS ===== */
-.noticia-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--branco);
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-bottom: 25px;
-  overflow: hidden;
-}
-
-/* Imagem principal da notícia */
-.img-noticia {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-}
-
-/* ===== LISTA DE SHOWS ===== */
-.lista-shows {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 colunas no PC */
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.show-item {
-  display: flex;
-  align-items: center;
-  background: var(--branco);
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  gap: 15px;
-}
-
-.img-artista {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* ===== RESPONSIVIDADE PARA CELULAR ===== */
-@media (max-width: 768px) {
-  /* Notícia em formato 1 coluna */
-  .noticia-card {
-    flex-direction: column;
-  }
-
-  /* Shows em apenas 1 coluna */
-  .lista-shows {
-    grid-template-columns: 1fr;
-  }
-
-  .show-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .img-artista {
-    width: 80px;
-    height: 80px;
-  }
-}
-/* ===== MENU ===== */
+/* ===== MENU INDEX (com hambúrguer) ===== */
 .navbar {
   background: var(--vermelho-cereja);
   color: white;
@@ -340,8 +311,34 @@ img {
   cursor: pointer;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+  /* Cards de notícia em 1 coluna (já é, mas garantimos) */
+  .noticia-card {
+    flex-direction: column;
+  }
+
+  /* Shows em apenas 1 coluna */
+  .lista-shows {
+    grid-template-columns: 1fr;
+  }
+
+  .show-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-artista {
+    width: 80px;
+    height: 80px;
+  }
+
+  .noticia-flamengo::before {
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Menu mobile do index */
   .navbar .menu {
     display: none;
     flex-direction: column;
