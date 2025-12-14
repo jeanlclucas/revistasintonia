@@ -128,7 +128,7 @@ img {
 .img-noticia {
   width: 100%;
   height: auto;
-  max-height: 500px;         /* Ajusta aqui se quiser menor/maior */
+  max-height: 500px;         /* Ajuste se quiser menor/maior */
   border-radius: 12px;
   margin: 15px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -313,7 +313,7 @@ footer {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-  /* Cards de notícia em 1 coluna (já é, mas garantimos) */
+  /* Cards de notícia em 1 coluna */
   .noticia-card {
     flex-direction: column;
   }
