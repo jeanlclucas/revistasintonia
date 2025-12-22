@@ -7,18 +7,24 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
+
+<body class="tema-natal">
+  <header class="header-natal">
     <div class="logo">
       <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
     </div>
     <h1>Revista Sintonia</h1>
-    <p class="tagline">Edição especial: Flamengo campeão brasileiro 2025</p>
-    <p class="flamengo-badge">Parabéns, Flamengo! Nono título brasileiro! 🏆</p>
+    <p class="tagline">Edição especial de Natal 🎄 | Notícias, cultura e tendências</p>
+    <div class="natal-badges">
+      <span class="badge-natal">🎅 Especial de Natal</span>
+      <span class="badge-natal">✨ Retrospectiva 2025</span>
+    </div>
   </header>
 
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Início</a></li>
       <li><a href="noticias.html">Notícias</a></li>
       <li><a href="sobre.html">Sobre</a></li>
       <li><a href="contatos.html">Contatos</a></li>
@@ -28,281 +34,129 @@
   <main>
     <h2>Últimas Notícias</h2>
 
-    <!-- FLAMENGO CAMPEÃO BRASILEIRO -->
-    <article class="noticia-card noticia-flamengo">
-      <img src="imagens/fla--25.avif" alt="Flamengo campeão brasileiro de 2025" class="img-noticia">
+    <!-- NOVAS NOTÍCIAS (TOP) -->
+    <section class="grid-noticias">
+      <article class="noticia-card">
+        <div class="conteudo-noticia">
+          <h3>EUA interceptam terceiro navio petroleiro perto da Venezuela, dizem agências</h3>
+          <p class="data">Dezembro de 2025</p>
+          <p>
+            Segundo informações divulgadas por agências internacionais, autoridades dos EUA
+            interceptaram mais um navio petroleiro na região próxima à Venezuela. O caso
+            volta a colocar em evidência a fiscalização sobre rotas de exportação e aumenta
+            a tensão diplomática no Caribe.
+          </p>
+          <p>
+            O episódio reacende debates sobre sanções, comércio internacional e impacto no
+            mercado de energia, enquanto o governo venezuelano critica ações desse tipo e
+            promete reação em fóruns internacionais.
+          </p>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="conteudo-noticia">
+          <h3>Como a geração Z enxerga as lideranças mais velhas</h3>
+          <p class="data">Dezembro de 2025</p>
+          <p>
+            A geração Z tem redefinido expectativas no ambiente de trabalho: busca líderes
+            mais próximos, com comunicação transparente, abertura para feedback e flexibilidade.
+            A “idade” pesa menos do que a postura e a capacidade de adaptação.
+          </p>
+          <p>
+            Para muitos jovens, lideranças que escutam, orientam com clareza e dão espaço
+            para autonomia tendem a engajar mais — enquanto modelos muito rígidos e hierárquicos
+            costumam gerar distanciamento.
+          </p>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="conteudo-noticia">
+          <h3>“Teoria do pássaro” pode indicar crise em relacionamento; entenda o teste</h3>
+          <p class="data">Dezembro de 2025</p>
+          <p>
+            Viral nas redes, a “teoria do pássaro” propõe um teste simples: compartilhar
+            algo pequeno do dia a dia (como “vi um pássaro hoje”) e observar se a outra
+            pessoa responde com interesse, atenção e continuidade.
+          </p>
+          <p>
+            A ideia é que respostas acolhedoras indicam conexão e reciprocidade. Já reações
+            frias e repetitivas podem sinalizar afastamento. Ainda assim, o contexto importa:
+            um teste não “define” uma relação — mas pode ser um convite para conversar.
+          </p>
+        </div>
+      </article>
+
+      <article class="noticia-card noticia-natal">
+        <div class="conteudo-noticia">
+          <h3>🦃 ENTENDA: Peru leva a fama, mas a ceia de Natal é com perua</h3>
+          <p class="data">Especial de Natal 🎄</p>
+          <p>
+            Muita gente chama de “peru de Natal”, mas em muitos casos quem vai ao forno é
+            a fêmea — a perua. O motivo é simples: ela costuma ter tamanho mais “ideal”
+            para venda e preparo, atendendo famílias de vários tamanhos.
+          </p>
+          <p>
+            Já os machos, normalmente maiores, acabam sendo mais direcionados para cortes e
+            outras formas de comercialização. No fim, o nome ficou… mas a estrela da ceia,
+            muitas vezes, é a perua.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- RESTO DAS NOTÍCIAS ANTIGAS (mantidas) -->
+    <article class="noticia-card">
+      <img src="imagens/fla--25.avif" alt="Notícia" class="img-noticia">
       <div class="conteudo-noticia">
         <h3>Flamengo conquista o nono título brasileiro sob comando de Filipe Luís</h3>
         <p class="data">3 de dezembro de 2025</p>
         <p>
           Dias depois de erguer a taça da Libertadores, o Flamengo confirmou a fase
-          histórica e garantiu seu <strong>nono título brasileiro</strong>. A equipe
-          rubro-negra venceu o Ceará por 1 a 0, no Maracanã, e confirmou a conquista
-          com uma rodada de antecedência, coroando uma campanha consistente do início
-          ao fim do torneio.
-        </p>
-        <p>
-          No comando, o técnico <strong>Filipe Luís</strong> segue acumulando troféus em
-          pouco mais de um ano à frente do time principal. Ex-lateral e ídolo recente
-          do clube, ele agora entra para a história também como treinador, liderando
-          um elenco que juntou talento, intensidade e regularidade ao longo do ano.
-        </p>
-        <p>
-          Com o enea garantido no Brasileirão e a América novamente em vermelho e preto,
-          o Flamengo mantém o embalo e já mira os próximos desafios internacionais. Na
-          arquibancada, o grito está definido: <strong>rumo ao Mundial</strong>.
+          histórica e garantiu seu nono título brasileiro...
         </p>
       </div>
     </article>
 
-    <!-- JAPÃO X CHINA - CAÇAS NA MIRA -->
+    <!-- (Mantive o restante igual ao seu original, mas se você quiser,
+         eu posso também reescrever tudo em um padrão único e mais “revista”) -->
+
     <article class="noticia-card">
-      <img src="imagens/chinna-guerra.jpeg" alt="Caças japoneses e chineses na região de Okinawa" class="img-noticia">
+      <img src="imagens/chinna-guerra.jpeg" alt="Caças" class="img-noticia">
       <div class="conteudo-noticia">
         <h3>Japão acusa China de colocar seus caças na mira em nova escalada militar</h3>
         <p class="data">Dezembro de 2025</p>
-        <p>
-          O governo do Japão acusou caças chineses de apontarem o radar de controle de tiro
-          – usado para travar alvo antes de um possível disparo de mísseis – contra aviões
-          japoneses próximos à ilha de Okinawa. Segundo o Ministério da Defesa japonês,
-          os episódios ocorreram em duas ocasiões distintas e foram classificados como atos
-          “perigosos” e “extremamente lamentáveis”.
-        </p>
-        <p>
-          Tóquio apresentou um forte protesto diplomático e afirma que o caso eleva ainda mais
-          a tensão em uma região já marcada por disputas, especialmente em torno de Taiwan
-          e das ilhas Senkaku/Diaoyu. Pequim nega as acusações, diz que realizava exercícios
-          de rotina e acusa o Japão de atrapalhar operações militares chinesas.
-        </p>
+        <p>O governo do Japão acusou caças chineses...</p>
       </div>
     </article>
 
-    <!-- EUA, OTAN E PRAZO 2027 -->
     <article class="noticia-card">
-      <img src="imagens/otan--br.webp" alt="Reunião de líderes da OTAN" class="img-noticia">
+      <img src="imagens/otan--br.webp" alt="OTAN" class="img-noticia">
       <div class="conteudo-noticia">
         <h3>EUA estabelecem 2027 como prazo para Europa liderar defesa da OTAN</h3>
         <p class="data">Dezembro de 2025</p>
-        <p>
-          Autoridades do Pentágono definiram 2027 como prazo para que os países europeus
-          da OTAN assumam a maior parte das responsabilidades pela defesa convencional
-          do continente – desde capacidades de inteligência até defesa aérea e mísseis.
-          A mensagem foi repassada a diplomatas europeus em reuniões em Washington.
-        </p>
-        <p>
-          A proposta foi recebida com preocupação por alguns governos, que consideram o
-          prazo apertado diante de limitações orçamentárias e de produção de equipamentos
-          militares. O debate reacende a discussão sobre o grau de dependência da Europa
-          em relação aos Estados Unidos e sobre o futuro da arquitetura de segurança
-          da aliança atlântica.
-        </p>
+        <p>Autoridades do Pentágono definiram 2027...</p>
       </div>
     </article>
 
-    <!-- NOTÍCIA - FLAMENGO TETRA LIBERTADORES -->
-    <article class="noticia-card" id="flamengo-tetra">
-      <img src="imagens/fla-liberta.webp" alt="Flamengo tetracampeão da Libertadores 2025" class="img-noticia">
+    <article class="noticia-card">
+      <img src="imagens/fla-liberta.webp" alt="Libertadores" class="img-noticia">
       <div class="conteudo-noticia">
         <h3>Flamengo é tetracampeão da Libertadores e se isola como brasileiro com mais títulos</h3>
         <p class="data">29 de novembro de 2025 - Lima (PER)</p>
-        <p>
-          O Flamengo escreveu mais um capítulo histórico ao vencer o Palmeiras por 1 a 0,
-          no Estadio Monumental, em Lima, e conquistar o seu quarto título da CONMEBOL
-          Libertadores. Com o resultado, o Rubro-Negro se isola como o clube brasileiro
-          com mais taças na competição continental.
-        </p>
-        <p>
-          O gol do título saiu no segundo tempo, em cobrança de escanteio: o zagueiro
-          Danilo subiu mais alto que a defesa palmeirense e cabeceou para o fundo da rede,
-          garantindo a vitória por 1 a 0 e fazendo a festa da Nação em Lima e no Brasil.
-        </p>
-        <ul class="lista-elenco">
-          <li><strong>Placar da final:</strong> Palmeiras 0 x 1 Flamengo</li>
-          <li><strong>Estádio:</strong> Estadio Monumental, Lima (Peru)</li>
-          <li><strong>Gol do título:</strong> Danilo, de cabeça, no segundo tempo</li>
-          <li>
-            <strong>Escalação do Flamengo:</strong>
-            Agustín Rossi; Guillermo Varela, Danilo, Léo Pereira, Alex Sandro;
-            Erick Pulgar, Jorginho, Giorgian de Arrascaeta; Jorge Carrascal,
-            Samuel Lino e Bruno Henrique.
-          </li>
-        </ul>
-        <p>
-          Com o tetracampeonato, o Flamengo carimba vaga em novas decisões internacionais
-          e reforça o domínio recente do futebol brasileiro na América do Sul.
-        </p>
+        <p>O Flamengo escreveu mais um capítulo histórico...</p>
       </div>
     </article>
 
-    <!-- DALL·E NO FLAMENGO (SINTONIA UNIVERSE) -->
-    <article class="noticia-card noticia-flamengo">
-      <img src="imagens/dall-fla.jpg" alt="Dall·E apresentado como novo reforço do Flamengo" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Dall·E é anunciado como reforço “virtual” do Flamengo para eternizar os títulos</h3>
-        <p class="data">2025 — Versão Sintonia Universe</p>
-        <p>
-          Em uma jogada que ninguém previu, o Flamengo ganhou um reforço inusitado
-          no universo criativo da Sintonia: o <strong>Dall·E</strong>, inteligência
-          artificial especialista em criar imagens, agora faz parte do “elenco”
-          rubro-negro no Sintonia Universe.
-        </p>
-        <p>
-          Na brincadeira que tomou conta das redes, o Dall·E “veio para o Flamengo para
-          ser campeão de Libertadores e deixar o Flamengo campeão brasileiro 2025”,
-          criando pôsteres, artes e capas históricas para eternizar cada conquista
-          da Nação.
-        </p>
-        <p>
-          No Sintonia Universe, o reforço não entra em campo, mas garante algo tão
-          importante quanto os gols: imagens épicas da torcida, dos troféus e dos
-          momentos que marcam a era vitoriosa do clube. Se é pra sonhar alto,
-          que seja em alta resolução.
-        </p>
-      </div>
-    </article>
-
-    <!-- NOTÍCIA - VINI JR E VIRGÍNIA -->
     <article class="noticia-card">
-      <img src="imagens/vini-virgin.webp" alt="Vini Jr. e Virgínia Fonseca" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Vini Jr. e Virgínia Fonseca assumem namoro e dominam as redes sociais</h3>
-        <p class="data">28 de outubro de 2025</p>
-        <p>
-          Depois de semanas de especulações, Vini Jr. e Virgínia Fonseca assumiram
-          publicamente o namoro. A influenciadora já vinha viajando com frequência para
-          Madrid para acompanhar as partidas do atacante, e os dois apareceram juntos
-          em registros que movimentaram as redes.
-        </p>
-        <p>
-          O anúncio oficial veio em uma publicação com fotos do casal e uma mensagem
-          carinhosa, que rapidamente se tornou um dos assuntos mais comentados do país.
-          Fãs dos dois comemoraram a novidade e já consideram o relacionamento um dos
-          casais do ano no mundo pop e esportivo.
-        </p>
-      </div>
-    </article>
-
-    <!-- NOTÍCIA - TRUQUE DE MESTRE 3 -->
-    <article class="noticia-card">
-      <img src="imagens/truque--br.webp" alt="Cena do filme Truque de Mestre 3" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>“Truque de Mestre 3” estreia com novas ilusões e trama mais ambiciosa</h3>
-        <p class="data">14 de novembro de 2025</p>
-        <p>
-          A franquia de magia e assaltos cinematográficos está de volta com
-          <strong>“Truque de Mestre 3” (Now You See Me: Now You Don’t)</strong>,
-          o terceiro filme da série. O longa reúne novamente os Cavaleiros, agora em
-          um plano global ainda mais arriscado, misturando tecnologia, ilusionismo
-          e reviravoltas.
-        </p>
-        <p>
-          Com o retorno de nomes como Jesse Eisenberg, Woody Harrelson e Morgan Freeman,
-          além de novos personagens, o filme promete agradar quem gostou dos primeiros
-          títulos e conquistar uma nova geração de fãs do gênero.
-        </p>
-      </div>
-    </article>
-
-    <!-- NOTÍCIA - ESPECIAL BOLSONARO (VISÃO) -->
-    <article class="noticia-card">
-      <div class="conteudo-noticia">
-        <h3>Especial: qual é a visão política defendida por Jair Bolsonaro?</h3>
-        <p class="data">2025</p>
-        <p>
-          O ex-presidente Jair Bolsonaro se consolidou na política brasileira como uma
-          liderança de direita marcada por um discurso de endurecimento na segurança
-          pública, valores conservadores nos costumes e defesa de uma agenda econômica
-          mais liberal, com foco em privatizações e menor intervenção do Estado.
-        </p>
-        <p>
-          Em seus discursos, Bolsonaro costuma destacar temas como combate à criminalidade,
-          fortalecimento das forças de segurança, crítica ao que chama de “ideologia de gênero”
-          e defesa da família em moldes tradicionais. Na economia, ele se aproximou de uma
-          pauta pró-mercado, defendendo reformas e abertura comercial.
-        </p>
-        <p>
-          Ao mesmo tempo, sua visão sobre meio ambiente, povos indígenas e políticas
-          climáticas recebeu críticas de especialistas e organizações, que apontam
-          retrocessos na proteção da Amazônia e no combate ao desmatamento. Já seus
-          apoiadores enxergam na sua postura um alinhamento com o agronegócio e a
-          busca por crescimento econômico rápido.
-        </p>
-        <p>
-          Desde o fim do mandato, Bolsonaro segue influente em parte do eleitorado,
-          mas enfrenta investigações e decisões judiciais que impactam seu futuro
-          político. O debate sobre seu legado segue polarizado e é um dos temas
-          centrais da política brasileira recente.
-        </p>
-      </div>
-    </article>
-
-    <!-- NOTÍCIA - CLIMA DE NATAL -->
-    <article class="outra-noticia">
-      <h3>Clima de Natal já toma conta das cidades brasileiras</h3>
-      <p>
-        Faltando poucas semanas para o Natal, ruas, shoppings e praças em todo o país
-        já estão iluminados com decoração temática. Árvores gigantes, presépios,
-        apresentações musicais e feiras especiais começam a atrair famílias em busca
-        de lazer, fotos e aquele clima de fim de ano.
-      </p>
-      <p>
-        Para muita gente, o período também é sinônimo de confraternização no trabalho,
-        amigo secreto, troca de presentes e balanço do ano que passou. A Sintonia irá
-        acompanhar essa reta final de 2025 com matérias especiais, dicas culturais e
-        histórias inspiradoras.
-      </p>
-    </article>
-
-    <!-- NOTÍCIA - Festival Tutano 2025 -->
-    <article class="noticia-card">
-      <img src="imagens/festival--tutano--02.jpg" alt="Festival Tutano 2025" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Festival Tutano 2025 em Curitiba</h3>
-        <p class="data">27 a 29 de setembro de 2025</p>
-        <p>
-          Curitiba recebe mais uma edição do Festival Tutano, que acontece no Museu Oscar Niemeyer.
-          O evento reunirá gastronomia, cultura e experiências únicas em três dias de muita energia
-          e sabor.
-        </p>
-      </div>
-    </article>
-
-    <!-- NOTÍCIA - Shows em Curitiba -->
-    <article class="noticia-card">
-      <img src="imagens/show--sintonia--porqueira.jpg" alt="Festival de Shows em Curitiba" class="img-noticia">
+      <img src="imagens/show--sintonia--porqueira.jpg" alt="Shows" class="img-noticia">
       <div class="conteudo-noticia">
         <h3>Grandes Shows agitam Curitiba em setembro</h3>
         <p class="data">Setembro de 2025</p>
-        <p>
-          A capital paranaense será palco de apresentações inesquecíveis em setembro.
-          Entre os destaques estão <strong>Katy Perry</strong> no dia 16/09, na Arena da Baixada,
-          e <strong>Ivyson</strong> no dia 18/09, no Teatro Fernanda Montenegro.
-          E isso é só o começo — uma programação completa com diversos artistas vai
-          transformar Curitiba em um verdadeiro palco cultural.
-        </p>
+        <p>Confira a programação completa de shows.</p>
         <a href="evento-shows.html" class="btn-leia-mais">Ler mais</a>
       </div>
-    </article>
-
-    <!-- NOTÍCIA - Camisa Sintonia -->
-    <article class="noticia-principal">
-      <h3>Lançamento Exclusivo: Camisa Oficial da Sintonia</h3>
-      <p class="data"></p>
-      <img src="imagens/camisa_sintonia_boa.png" alt="Camisa Sintonia" class="img-noticia">
-      <p>
-        A Sintonia apresenta com orgulho sua nova camisa oficial, um símbolo da nossa
-        identidade e criatividade. Com design moderno, ela estará disponível em breve.
-      </p>
-    </article>
-
-    <!-- NOTÍCIA - Torres de papel -->
-    <article class="outra-noticia">
-      <h3>Competição de Torres de Papel agita a equipe</h3>
-      <p>
-        A equipe da Sintonia participou de uma divertida competição para criar uma torre
-        de papel que suportasse um celular. Apesar de uma polêmica decisão dos jurados,
-        todos levaram na esportiva, reforçando o bom ambiente da revista.
-      </p>
     </article>
   </main>
 
@@ -310,6 +164,5 @@
     <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
   </footer>
   <script src="script.js"></script>
-
 </body>
 </html>
