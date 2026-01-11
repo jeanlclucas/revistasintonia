@@ -5,46 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contatos - Sintonia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body class="tema-natal">
-  <header class="header-natal">
-    <div class="logo">
-      <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
-    </div>
-    <h1>Revista Sintonia</h1>
-    <p class="tagline">Fale com a equipe da Sintonia 📩</p>
-    <div class="natal-badges">
-      <span class="badge-natal">📞 Contato</span>
-      <span class="badge-natal">🎄 Atendimento</span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
+        </div>
+        <div class="brand-title">
+          <h1>Revista Sintonia</h1>
+          <p>Fale com a equipe da redação</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Buscar no Sintonia..." aria-label="Buscar">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="actions">
+        <span class="badge">CONTATO</span>
+      </div>
     </div>
   </header>
 
   <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="noticias.html">Notícias</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contatos.html">Contatos</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a class="active" href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main>
-    <h2>Entre em Contato</h2>
-    <p><strong>Email:</strong> <a href="mailto:sintonia.revista@gmail.com">sintonia.revista@gmail.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5599999999999" target="_blank">(99) 99999-9999</a></p>
-    <p><strong>Telefone:</strong> (11) 4002-8922</p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com" target="_blank">@sintonia_revista</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">revistasintonia24</a></p>
-    <p><strong>Endereço:</strong> R. Lourenço Pinto, 190 - Centro, Curitiba - PR</p>
+    <div class="container">
+      <div class="section-title">
+        <h2>Entre em contato</h2>
+        <a href="noticias.html">Voltar</a>
+      </div>
+
+      <section class="two-col">
+        <article class="card">
+          <div class="card-body">
+            <div class="meta">
+              <span class="chip">Formulário</span>
+              <span>Resposta rápida</span>
+            </div>
+
+            <h3 style="margin-top:10px;">Envie sua mensagem</h3>
+            <p>Use para sugerir pauta, corrigir informações, pedir parceria ou mandar feedback.</p>
+
+            <form style="margin-top:12px;">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nome">Nome</label>
+                  <input id="nome" type="text" placeholder="Seu nome" />
+                </div>
+
+                <div class="field">
+                  <label for="email">E-mail</label>
+                  <input id="email" type="email" placeholder="seuemail@exemplo.com" />
+                </div>
+
+                <div class="field">
+                  <label for="assunto">Assunto</label>
+                  <select id="assunto">
+                    <option>Selecione...</option>
+                    <option>Sugestão de pauta</option>
+                    <option>Correção / atualização</option>
+                    <option>Parceria</option>
+                    <option>Denúncia / relato</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="telefone">Telefone (opcional)</label>
+                  <input id="telefone" type="text" placeholder="(99) 99999-9999" />
+                </div>
+
+                <div class="field" style="grid-column: 1 / -1;">
+                  <label for="mensagem">Mensagem</label>
+                  <textarea id="mensagem" placeholder="Escreva aqui sua mensagem..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn" type="button">Enviar mensagem</button>
+                <a class="btn" href="mailto:sintonia.revista@gmail.com">Enviar por e-mail</a>
+              </div>
+
+              <p class="small" style="margin-top:10px;">
+                * O botão “Enviar mensagem” é visual (front-end). Se você quiser, eu conecto com envio real (Google Forms/PHP).
+              </p>
+            </form>
+          </div>
+        </article>
+
+        <aside class="card">
+          <div class="card-body">
+            <div class="meta">
+              <span class="chip">Canais oficiais</span>
+              <span>Sintonia</span>
+            </div>
+
+            <h3 style="margin-top:10px;">Contato direto</h3>
+            <p style="margin-top:8px;"><strong>Email:</strong> <a href="mailto:sintonia.reviista@gmail.com">sintonia.reviista@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5599999999999" target="_blank">(99) 99999-9999</a></p>
+            <p><strong>Telefone:</strong> (11) 4002-8922</p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com" target="_blank">@sintonia_revista</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">revistasintonia24</a></p>
+            <p><strong>Endereço:</strong> R. Lourenço Pinto, 190 - Centro, Curitiba - PR</p>
+          </div>
+        </aside>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
+    <div class="container footer-inner">
+      <div>© 2025 Revista Sintonia</div>
+      <div class="small">Contato • Sugestão de pauta • Correções</div>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-

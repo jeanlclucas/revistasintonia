@@ -3,128 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shows em Curitiba - Sintonia</title>
+  <title>Agenda de Eventos - Sintonia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body class="tema-natal">
-  <header class="header-natal">
-    <div class="logo">
-      <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
-    </div>
-    <h1>Revista Sintonia</h1>
-    <p class="tagline">Agenda de Shows - Setembro 2025 🎶</p>
-    <div class="natal-badges">
-      <span class="badge-natal">🎤 Eventos</span>
-      <span class="badge-natal">📍 Curitiba</span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
+        </div>
+        <div class="brand-title">
+          <h1>Revista Sintonia</h1>
+          <p>Agenda de shows • Curitiba</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Buscar evento..." aria-label="Buscar evento">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="actions">
+        <span class="badge">AGENDA</span>
+      </div>
     </div>
   </header>
 
+  <!-- MENU (sem Eventos no topo) -->
   <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="noticias.html">Notícias</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contatos.html">Contatos</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <section class="breaking">
+    <div class="container breaking-inner">
+      <span class="breaking-tag">AGENDA</span>
+      <span class="breaking-text">Shows e eventos confirmados — Setembro de 2025 em Curitiba.</span>
+    </div>
+  </section>
+
   <main>
-    <h2>Agenda de Shows em Curitiba</h2>
-    <p>
-      Setembro será um mês vibrante em Curitiba! Diversos artistas nacionais e internacionais
-      vão subir aos palcos mais icônicos da cidade, trazendo música, emoção e experiências únicas.
-      Confira a programação completa e prepare-se para viver grandes momentos:
-    </p>
+    <div class="container">
+      <div class="section-title">
+        <h2>Agenda de Setembro 2025</h2>
+        <a href="noticias.html">Voltar às notícias</a>
+      </div>
 
-    <section class="lista-shows">
-      <article class="show-item">
-        <img src="imagens/katy--perry-show.jpg" alt="Katy Perry" class="img-artista">
-        <div>
-          <h3>Katy Perry</h3>
-          <p>📅 16/09 — Arena da Baixada</p>
+      <section class="card">
+        <div class="card-body">
+          <p>
+            Confira a programação completa. No celular, é só rolar — e no computador os eventos aparecem em duas colunas.
+          </p>
         </div>
-      </article>
+      </section>
 
-      <article class="show-item">
-        <img src="imagens/Ivyson--show.jpg" alt="Ivyson" class="img-artista">
-        <div>
-          <h3>Ivyson</h3>
-          <p>📅 18/09 — Teatro Fernanda Montenegro</p>
-        </div>
-      </article>
+      <!-- GRID BONITO -->
+      <section class="event-grid">
 
-      <article class="show-item">
-        <img src="imagens/blindagem--show.jpg" alt="Blindagem" class="img-artista">
-        <div>
-          <h3>Blindagem</h3>
-          <p>📅 19/09 — Teatro Guaíra</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="katy perry 16/09 arena da baixada">
+          <div class="event-thumb">
+            <img src="imagens/katy--perry-show.jpg" alt="Katy Perry">
+          </div>
+          <div class="event-info">
+            <h4>Katy Perry</h4>
+            <p class="whenwhere">📅 16/09 — Arena da Baixada</p>
+            <p class="desc">Pop internacional em uma das noites mais esperadas do mês.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/marinho--da-vila-show.jpg" alt="Martinho da Vila" class="img-artista">
-        <div>
-          <h3>Martinho da Vila</h3>
-          <p>📅 20/09 — Teatro Positivo</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="ivyson 18/09 teatro fernanda montenegro">
+          <div class="event-thumb">
+            <img src="imagens/Ivyson--show.jpg" alt="Ivyson">
+          </div>
+          <div class="event-info">
+            <h4>Ivyson</h4>
+            <p class="whenwhere">📅 18/09 — Teatro Fernanda Montenegro</p>
+            <p class="desc">Clima intimista e repertório para cantar junto.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/tmb--samba--show.jpg" alt="Curitiba TBM Samba" class="img-artista">
-        <div>
-          <h3>Curitiba TBM Samba</h3>
-          <p>📅 20/09 — Complexo Durival de Britto</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="blindagem 19/09 teatro guaira">
+          <div class="event-thumb">
+            <img src="imagens/blindagem--show.jpg" alt="Blindagem">
+          </div>
+          <div class="event-info">
+            <h4>Blindagem</h4>
+            <p class="whenwhere">📅 19/09 — Teatro Guaíra</p>
+            <p class="desc">Rock curitibano com energia de sobra.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/rosa-de-serom--show.jpg" alt="Rosa de Saron" class="img-artista">
-        <div>
-          <h3>Rosa de Saron</h3>
-          <p>📅 21/09 — Ópera de Arame</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="martinho da vila 20/09 teatro positivo">
+          <div class="event-thumb">
+            <img src="imagens/marinho--da-vila-show.jpg" alt="Martinho da Vila">
+          </div>
+          <div class="event-info">
+            <h4>Martinho da Vila</h4>
+            <p class="whenwhere">📅 20/09 — Teatro Positivo</p>
+            <p class="desc">Samba clássico e uma noite de nostalgia e alegria.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/mel--lisboas-conta-showw.jpg" alt="Mel Lisboa canta Rita Lee" class="img-artista">
-        <div>
-          <h3>Mel Lisboa canta Rita Lee</h3>
-          <p>📅 25/09 — Tork n’ Roll</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="curitiba tbm samba 20/09 durival de britto">
+          <div class="event-thumb">
+            <img src="imagens/tmb--samba--show.jpg" alt="Curitiba TBM Samba">
+          </div>
+          <div class="event-info">
+            <h4>Curitiba TBM Samba</h4>
+            <p class="whenwhere">📅 20/09 — Complexo Durival de Britto</p>
+            <p class="desc">Evento para quem quer curtir samba com a galera.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/ze-caralho--show.jpg" alt="Zé Ramalho" class="img-artista">
-        <div>
-          <h3>Zé Ramalho</h3>
-          <p>📅 26/09 — Teatro Positivo</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="rosa de saron 21/09 opera de arame">
+          <div class="event-thumb">
+            <img src="imagens/rosa-de-serom--show.jpg" alt="Rosa de Saron">
+          </div>
+          <div class="event-info">
+            <h4>Rosa de Saron</h4>
+            <p class="whenwhere">📅 21/09 — Ópera de Arame</p>
+            <p class="desc">Show marcante em um dos cartões-postais da cidade.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/40--finger--show.jpg" alt="40 Fingers" class="img-artista">
-        <div>
-          <h3>40 Fingers</h3>
-          <p>📅 26/09 — Teatro Guaíra</p>
-        </div>
-      </article>
+        <article class="card event-item" data-filter="mel lisboa rita lee 25/09 tork n roll">
+          <div class="event-thumb">
+            <img src="imagens/mel--lisboas-conta-showw.jpg" alt="Mel Lisboa canta Rita Lee">
+          </div>
+          <div class="event-info">
+            <h4>Mel Lisboa canta Rita Lee</h4>
+            <p class="whenwhere">📅 25/09 — Tork n’ Roll</p>
+            <p class="desc">Tributo com atitude e clássicos inesquecíveis.</p>
+          </div>
+        </article>
 
-      <article class="show-item">
-        <img src="imagens/anavitoria--show.jpg" alt="Anavitória" class="img-artista">
-        <div>
-          <h3>Anavitória</h3>
-          <p>📅 28/09 — Teatro Positivo</p>
-        </div>
-      </article>
-    </section>
+        <article class="card event-item" data-filter="ze ramalho 26/09 teatro positivo">
+          <div class="event-thumb">
+            <img src="imagens/ze-caralho--show.jpg" alt="Zé Ramalho">
+          </div>
+          <div class="event-info">
+            <h4>Zé Ramalho</h4>
+            <p class="whenwhere">📅 26/09 — Teatro Positivo</p>
+            <p class="desc">Repertório forte e hits para quem gosta de MPB/rock.</p>
+          </div>
+        </article>
+
+        <article class="card event-item" data-filter="40 fingers 26/09 teatro guaira">
+          <div class="event-thumb">
+            <img src="imagens/40--finger--show.jpg" alt="40 Fingers">
+          </div>
+          <div class="event-info">
+            <h4>40 Fingers</h4>
+            <p class="whenwhere">📅 26/09 — Teatro Guaíra</p>
+            <p class="desc">Performance instrumental impressionante (vale muito!).</p>
+          </div>
+        </article>
+
+        <article class="card event-item" data-filter="anavitoria 28/09 teatro positivo">
+          <div class="event-thumb">
+            <img src="imagens/anavitoria--show.jpg" alt="Anavitória">
+          </div>
+          <div class="event-info">
+            <h4>Anavitória</h4>
+            <p class="whenwhere">📅 28/09 — Teatro Positivo</p>
+            <p class="desc">Turnê com clima leve, romântico e cheio de hits.</p>
+          </div>
+        </article>
+
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
+    <div class="container footer-inner">
+      <div>© 2025 Revista Sintonia</div>
+      <div class="small">Agenda • Cultura • Curitiba</div>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

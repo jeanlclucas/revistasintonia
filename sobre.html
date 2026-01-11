@@ -5,49 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - Sintonia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body class="tema-natal">
-  <header class="header-natal">
-    <div class="logo">
-      <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
-    </div>
-    <h1>Revista Sintonia</h1>
-    <p class="tagline">Quem somos e por que existimos ✨</p>
-    <div class="natal-badges">
-      <span class="badge-natal">🎄 Sintonia</span>
-      <span class="badge-natal">📚 História</span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
+        </div>
+        <div class="brand-title">
+          <h1>Revista Sintonia</h1>
+          <p>Quem somos • nossa essência</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Buscar no Sintonia..." aria-label="Buscar">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="actions">
+        <span class="badge">SOBRE</span>
+      </div>
     </div>
   </header>
 
   <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="noticias.html">Notícias</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contatos.html">Contatos</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a class="active" href="sobre.html">Sobre</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
   </nav>
 
   <main>
-    <section class="apresentacao">
-      <h2>Nossa História</h2>
-      <p>
-        A Revista Sintonia nasceu do desejo de criar um espaço criativo e inspirador
-        para leitores de todas as idades. Desde sua fundação em 2025, buscamos
-        promover cultura, inovação e informação de qualidade.
-        <br><br>
-        Acreditamos no poder das histórias para unir pessoas e transformar ideias em
-        realidade, tornando a Sintonia um verdadeiro ponto de encontro digital.
-      </p>
-    </section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossa história</h2>
+        <a href="contatos.html">Fale com a redação</a>
+      </div>
+
+      <section class="card">
+        <div class="card-body">
+          <div class="meta">
+            <span class="chip">Sintonia</span>
+            <span>Desde 2025</span>
+          </div>
+
+          <h3>Um portal com identidade própria</h3>
+          <p>
+            A Revista Sintonia nasceu do desejo de criar um espaço criativo e informativo, com uma linguagem acessível,
+            visual bonito e conteúdos que conectam pessoas. A gente mistura o que é importante no mundo com o que está
+            em alta no dia a dia — sem perder a essência.
+          </p>
+          <p style="margin-top:10px;">
+            Nosso objetivo é simples: entregar notícias com contexto, explicar sem enrolar e organizar o conteúdo de um jeito
+            agradável para ler no celular ou no computador.
+          </p>
+          <p style="margin-top:10px;">
+            Se você tem uma sugestão de pauta, correção ou parceria, chama a gente na página de contatos.
+          </p>
+
+          <a class="btn" href="noticias.html">Ver notícias</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
+    <div class="container footer-inner">
+      <div>© 2025 Revista Sintonia</div>
+      <div class="small">Sobre • Missão • Visão</div>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

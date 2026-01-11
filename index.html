@@ -3,63 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sintonia - Início</title>
+  <title>Sintonia - Portal</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body class="tema-natal">
-  <header class="header-natal">
-    <div class="logo">
-      <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
-    </div>
-    <h1>Revista Sintonia</h1>
-    <p class="tagline">Edição especial de Natal 🎄 | Conectando histórias, ideias e inovação</p>
-    <div class="natal-badges">
-      <span class="badge-natal">🎅 Especial de Natal</span>
-      <span class="badge-natal">✨ Últimas notícias</span>
-      <span class="badge-natal">🎁 Cultura & tendências</span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
+        </div>
+        <div class="brand-title">
+          <h1>Revista Sintonia</h1>
+          <p>Portal de notícias • cultura • tendências</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Buscar no Sintonia..." aria-label="Buscar">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="actions">
+        <span class="badge">SINTONIA</span>
+      </div>
     </div>
   </header>
 
+  <!-- MENU (sem Eventos) -->
   <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="noticias.html">Notícias</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contatos.html">Contatos</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a class="active" href="index.html">Início</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main>
-    <section class="apresentacao">
-      <h2>Bem-vindo à Sintonia</h2>
-      <p>
-        A Sintonia é uma revista online criada para conectar pessoas e compartilhar
-        ideias criativas. Explore nossas páginas para conhecer nossa história, conferir
-        as últimas notícias e entrar em contato com nossa equipe.
-      </p>
-    </section>
+  <section class="breaking">
+    <div class="container breaking-inner">
+      <span class="breaking-tag">AGORA</span>
+      <span class="breaking-text">Manchetes do Brasil e do mundo com texto completo e visual profissional.</span>
+    </div>
+  </section>
 
-    <section class="destaque-natal">
-      <article class="noticia-card noticia-natal">
-        <div class="conteudo-noticia">
-          <h3>Especial de Natal: novidades no ar 🎄</h3>
-          <p class="data">Dezembro de 2025</p>
-          <p>
-            Atualizamos a Sintonia com um tema natalino e novas matérias, trazendo
-            tendências, curiosidades e assuntos que estão movimentando o momento.
-          </p>
-          <a href="noticias.html" class="btn-leia-mais">Ver últimas notícias</a>
-        </div>
-      </article>
-    </section>
+  <main>
+    <div class="container">
+      <div class="section-title">
+        <h2>Destaque principal</h2>
+        <a href="noticias.html">Ver todas as notícias</a>
+      </div>
+
+      <section class="grid-home">
+        <!-- HERO -->
+        <article class="card hero">
+          <div class="hero-media">
+            <!-- IMAGEM REAL (sem borda) -->
+            <img src="imagens/img-10-01/missel-hiper.png" alt="Ataque com míssil - ilustração">
+          </div>
+
+          <div class="hero-body">
+            <div class="meta">
+              <span class="chip">Mundo</span>
+              <span>Janeiro de 2026</span>
+            </div>
+
+            <h3>Rússia usa míssil hipersônico em ataque perto da fronteira com a Polônia</h3>
+            <p>
+              A ação elevou o nível de alerta na região e reforçou preocupações sobre escalada do conflito e impactos
+              indiretos em países vizinhos.
+            </p>
+
+            <a class="btn" href="noticias.html">Ler matéria completa</a>
+          </div>
+        </article>
+
+        <!-- LATERAL: em alta -->
+        <aside class="card">
+          <div class="card-body">
+            <div class="meta">
+              <span class="chip">Em alta</span>
+              <span>Hoje</span>
+            </div>
+
+            <div class="list" style="margin-top:12px;">
+              <a class="list-item" href="noticias.html">
+                <div class="thumb">
+                  <img src="imagens/img-10-01/avalanche-lixo.png" alt="Resgate após avalanche de lixo">
+                </div>
+                <div>
+                  <h4>Filipinas: sinais de vida após avalanche de lixo</h4>
+                  <p>Mundo • Emergência</p>
+                </div>
+              </a>
+
+              <a class="list-item" href="noticias.html">
+                <div class="thumb">
+                  <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto de agricultores na Irlanda">
+                </div>
+                <div>
+                  <h4>Irlanda protesta contra acordo UE–Mercosul</h4>
+                  <p>Economia • Comércio</p>
+                </div>
+              </a>
+
+              <a class="list-item" href="noticias.html">
+                <div class="thumb">
+                  <img src="imagens/img-10-01/inflacao-br.png" alt="Indicadores de inflação no Brasil">
+                </div>
+                <div>
+                  <h4>Brasil: inflação desacelera e mercado mira juros</h4>
+                  <p>Brasil • Economia</p>
+                </div>
+              </a>
+            </div>
+
+            <a class="btn" href="contatos.html" style="margin-top:14px;">Enviar sugestão de pauta</a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- DESTAQUES SECUNDÁRIOS -->
+      <div class="section-title" style="margin-top:16px;">
+        <h2>Mais destaques</h2>
+        <a href="noticias.html">Ir para Notícias</a>
+      </div>
+
+      <section class="news-feed" style="gap: 12px;">
+        <article class="card article" style="padding:12px;">
+          <div class="thumb">
+            <img src="imagens/img-10-01/coreia.png" alt="Tensão na Coreia - drones">
+          </div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="chip">Mundo</span>
+              <span>Janeiro de 2026</span>
+            </div>
+            <h3>Coreia do Norte ameaça resposta após acusar o Sul de incursões com drones</h3>
+            <p>
+              O episódio amplia a tensão na península coreana e reacende o alerta sobre incidentes militares na região.
+            </p>
+            <a class="btn" href="noticias.html">Ler mais</a>
+          </div>
+        </article>
+
+        <article class="card article" style="padding:12px;">
+          <div class="thumb">
+            <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto UE–Mercosul">
+          </div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="chip">Economia</span>
+              <span>Janeiro de 2026</span>
+            </div>
+            <h3>UE–Mercosul: agricultores protestam e acordo volta ao centro do debate</h3>
+            <p>
+              Pressão política na Europa pode impactar o andamento do acordo e gerar incerteza para setores exportadores.
+            </p>
+            <a class="btn" href="noticias.html">Ler mais</a>
+          </div>
+        </article>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
+    <div class="container footer-inner">
+      <div>© 2025 Revista Sintonia</div>
+      <div class="small">Tema escuro • Mobile-first • Imagens ajustadas</div>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

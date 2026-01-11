@@ -8,161 +8,285 @@
   <script src="script.js" defer></script>
 </head>
 
-<body class="tema-natal">
-  <header class="header-natal">
-    <div class="logo">
-      <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
-    </div>
-    <h1>Revista Sintonia</h1>
-    <p class="tagline">Edição especial de Natal 🎄 | Notícias, cultura e tendências</p>
-    <div class="natal-badges">
-      <span class="badge-natal">🎅 Especial de Natal</span>
-      <span class="badge-natal">✨ Retrospectiva 2025</span>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="imagens/logo_porqueira_sintonia.jpg" alt="Logo Sintonia">
+        </div>
+        <div class="brand-title">
+          <h1>Revista Sintonia</h1>
+          <p>Notícias completas • Brasil e mundo</p>
+        </div>
+      </div>
+
+      <div class="search">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Buscar manchetes (ex: Brasil, Mundo, Economia)..." aria-label="Buscar manchetes">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="actions">
+        <span class="badge">NOTÍCIAS</span>
+      </div>
     </div>
   </header>
 
   <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="noticias.html">Notícias</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contatos.html">Contatos</a></li>
-    </ul>
+    <div class="container nav-inner">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a class="active" href="noticias.html">Notícias</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <section class="breaking">
+    <div class="container breaking-inner">
+      <span class="breaking-tag">DESTAQUE</span>
+      <span class="breaking-text">Agora as matérias aparecem completas (sem cortar). Use a busca para filtrar.</span>
+    </div>
+  </section>
+
   <main>
-    <h2>Últimas Notícias</h2>
+    <div class="container">
+      <div class="news-page">
+        <!-- FEED COMPLETO -->
+        <section class="news-feed">
 
-    <!-- NOVAS NOTÍCIAS (TOP) -->
-    <section class="grid-noticias">
-      <article class="noticia-card">
-        <div class="conteudo-noticia">
-          <h3>EUA interceptam terceiro navio petroleiro perto da Venezuela, dizem agências</h3>
-          <p class="data">Dezembro de 2025</p>
-          <p>
-            Segundo informações divulgadas por agências internacionais, autoridades dos EUA
-            interceptaram mais um navio petroleiro na região próxima à Venezuela. O caso
-            volta a colocar em evidência a fiscalização sobre rotas de exportação e aumenta
-            a tensão diplomática no Caribe.
-          </p>
-          <p>
-            O episódio reacende debates sobre sanções, comércio internacional e impacto no
-            mercado de energia, enquanto o governo venezuelano critica ações desse tipo e
-            promete reação em fóruns internacionais.
-          </p>
-        </div>
-      </article>
+          <!-- 1 -->
+          <article class="card article" data-filter="mundo russia missil hipersonico polonia ucrania janeiro 2026 conflito europa">
+            <div class="thumb">
+              <img src="imagens/img-10-01/missel-hiper.png" alt="Míssil hipersônico - ilustração">
+            </div>
 
-      <article class="noticia-card">
-        <div class="conteudo-noticia">
-          <h3>Como a geração Z enxerga as lideranças mais velhas</h3>
-          <p class="data">Dezembro de 2025</p>
-          <p>
-            A geração Z tem redefinido expectativas no ambiente de trabalho: busca líderes
-            mais próximos, com comunicação transparente, abertura para feedback e flexibilidade.
-            A “idade” pesa menos do que a postura e a capacidade de adaptação.
-          </p>
-          <p>
-            Para muitos jovens, lideranças que escutam, orientam com clareza e dão espaço
-            para autonomia tendem a engajar mais — enquanto modelos muito rígidos e hierárquicos
-            costumam gerar distanciamento.
-          </p>
-        </div>
-      </article>
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Mundo</span>
+                <span>Janeiro de 2026</span>
+              </div>
 
-      <article class="noticia-card">
-        <div class="conteudo-noticia">
-          <h3>“Teoria do pássaro” pode indicar crise em relacionamento; entenda o teste</h3>
-          <p class="data">Dezembro de 2025</p>
-          <p>
-            Viral nas redes, a “teoria do pássaro” propõe um teste simples: compartilhar
-            algo pequeno do dia a dia (como “vi um pássaro hoje”) e observar se a outra
-            pessoa responde com interesse, atenção e continuidade.
-          </p>
-          <p>
-            A ideia é que respostas acolhedoras indicam conexão e reciprocidade. Já reações
-            frias e repetitivas podem sinalizar afastamento. Ainda assim, o contexto importa:
-            um teste não “define” uma relação — mas pode ser um convite para conversar.
-          </p>
-        </div>
-      </article>
+              <h3>Rússia usa míssil hipersônico em ataque perto da fronteira com a Polônia</h3>
+              <p class="data">Atualização internacional</p>
 
-      <article class="noticia-card noticia-natal">
-        <div class="conteudo-noticia">
-          <h3>🦃 ENTENDA: Peru leva a fama, mas a ceia de Natal é com perua</h3>
-          <p class="data">Especial de Natal 🎄</p>
-          <p>
-            Muita gente chama de “peru de Natal”, mas em muitos casos quem vai ao forno é
-            a fêmea — a perua. O motivo é simples: ela costuma ter tamanho mais “ideal”
-            para venda e preparo, atendendo famílias de vários tamanhos.
-          </p>
-          <p>
-            Já os machos, normalmente maiores, acabam sendo mais direcionados para cortes e
-            outras formas de comercialização. No fim, o nome ficou… mas a estrela da ceia,
-            muitas vezes, é a perua.
-          </p>
-        </div>
-      </article>
-    </section>
+              <div class="text">
+                <p>
+                  Um ataque atribuído à Rússia atingiu a região oeste da Ucrânia, em área próxima à fronteira com a Polônia,
+                  país integrante da OTAN. O episódio chamou atenção por envolver armamento descrito como hipersônico,
+                  um tipo de míssil que costuma reduzir o tempo de reação das defesas e aumentar o nível de alerta.
+                </p>
+                <p>
+                  Autoridades ucranianas relataram danos em estruturas e acionamento de sistemas de defesa aérea,
+                  enquanto governos europeus reforçaram a preocupação com o risco de escalada e efeitos colaterais
+                  do conflito em territórios vizinhos. Mesmo quando um ataque não cruza fronteiras, a proximidade com
+                  países da OTAN costuma gerar cautela diplomática e militar.
+                </p>
+                <p>
+                  Para o público, o impacto é direto no cenário global: o conflito pressiona custos de energia,
+                  altera rotas comerciais e influencia decisões de segurança e orçamento em diversos países. A tendência,
+                  segundo analistas, é que a tensão continue alta, com episódios pontuais elevando a instabilidade na região.
+                </p>
+              </div>
+            </div>
+          </article>
 
-    <!-- RESTO DAS NOTÍCIAS ANTIGAS (mantidas) -->
-    <article class="noticia-card">
-      <img src="imagens/fla--25.avif" alt="Notícia" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Flamengo conquista o nono título brasileiro sob comando de Filipe Luís</h3>
-        <p class="data">3 de dezembro de 2025</p>
-        <p>
-          Dias depois de erguer a taça da Libertadores, o Flamengo confirmou a fase
-          histórica e garantiu seu nono título brasileiro...
-        </p>
+          <!-- 2 -->
+          <article class="card article" data-filter="mundo filipinas avalanche lixo aterro resgate sinais de vida janeiro 2026 desastre">
+            <div class="thumb">
+              <img src="imagens/img-10-01/avalanche-lixo.png" alt="Avalanche de lixo - resgate">
+            </div>
+
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Mundo</span>
+                <span>Janeiro de 2026</span>
+              </div>
+
+              <h3>Filipinas: equipes detectam sinais de vida após avalanche de lixo em aterro</h3>
+              <p class="data">Resgate e emergência</p>
+
+              <div class="text">
+                <p>
+                  Equipes de resgate nas Filipinas informaram ter detectado sinais de vida sob os destroços depois que uma
+                  avalanche de lixo atingiu um aterro sanitário, soterrando pessoas e deixando mortos, feridos e desaparecidos.
+                  O trabalho é considerado delicado porque a área permanece instável, com risco de novos deslizamentos.
+                </p>
+                <p>
+                  Operações desse tipo costumam envolver escavação cuidadosa e reforço estrutural para evitar que o terreno ceda.
+                  Enquanto isso, familiares aguardam informações e equipes médicas são mobilizadas para atendimento emergencial.
+                </p>
+                <p>
+                  O caso reacende uma discussão que vai além do resgate: como cidades gerenciam resíduos, como aterros são fiscalizados
+                  e quais medidas de segurança existem para proteger trabalhadores. Em muitos países, crescimento urbano acelerado e
+                  infraestrutura defasada aumentam o risco de tragédias como essa.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="card article" data-filter="economia ue mercosul irlanda agricultores protesto comercio janeiro 2026 brasil exportacao acordo">
+            <div class="thumb">
+              <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto de agricultores - Irlanda">
+            </div>
+
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Economia</span>
+                <span>Janeiro de 2026</span>
+              </div>
+
+              <h3>Agricultores irlandeses protestam contra acordo UE–Mercosul</h3>
+              <p class="data">Comércio internacional</p>
+
+              <div class="text">
+                <p>
+                  Agricultores na Irlanda realizaram protestos contra o acordo comercial entre a União Europeia e o Mercosul.
+                  O principal argumento do setor é que a abertura comercial pode aumentar a entrada de produtos agrícolas
+                  mais baratos no mercado europeu, pressionando a renda de produtores locais e elevando a competição.
+                </p>
+                <p>
+                  Do lado europeu, críticos também citam preocupações com padrões sanitários, regras ambientais e rastreabilidade.
+                  Já defensores do acordo afirmam que ele pode ampliar oportunidades para exportações e reduzir custos em cadeias
+                  produtivas, dependendo de como as regras serão implementadas.
+                </p>
+                <p>
+                  Para o Mercosul — incluindo o Brasil — o assunto é estratégico: envolve exportações, negociações políticas e
+                  requisitos de qualidade. Quando protestos ganham força na Europa, a tramitação do acordo pode ficar mais lenta,
+                  criando incerteza para setores que esperam ampliar mercado.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="card article" data-filter="mundo coreia do norte coreia do sul drones tensao janeiro 2026 seguranca peninsula">
+            <div class="thumb">
+              <img src="imagens/img-10-01/coreia.png" alt="Coreia - drones e tensão">
+            </div>
+
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Mundo</span>
+                <span>Janeiro de 2026</span>
+              </div>
+
+              <h3>Coreia do Norte ameaça resposta após acusar o Sul de incursões com drones</h3>
+              <p class="data">Tensão na península</p>
+
+              <div class="text">
+                <p>
+                  A Coreia do Norte acusou a Coreia do Sul de violar seu território com drones e afirmou que responderá às ações,
+                  elevando a tensão em uma das regiões mais sensíveis do cenário internacional. Em episódios assim, os dois lados
+                  costumam trocar acusações e reforçar discursos de defesa e soberania.
+                </p>
+                <p>
+                  Incursões envolvendo drones são especialmente delicadas porque combinam tecnologia de vigilância, coleta de dados e,
+                  em alguns casos, capacidade de ataque. Mesmo quando há negação oficial ou investigação em andamento, o atrito tende
+                  a crescer por causa do histórico de confrontos e do risco de escalada.
+                </p>
+                <p>
+                  Para o mundo, o tema importa porque qualquer instabilidade ali repercute em mercados, diplomacia e segurança no Leste Asiático.
+                  A comunidade internacional costuma acompanhar com cautela e buscar redução do risco de incidentes militares.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="card article" data-filter="brasil economia inflacao juros selic janeiro 2026 banco central ipca">
+            <div class="thumb">
+              <img src="imagens/img-10-01/inflacao-br.png" alt="Inflação no Brasil - ilustração">
+            </div>
+
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Brasil</span>
+                <span>Janeiro de 2026</span>
+              </div>
+
+              <h3>Brasil: inflação desacelera e reforça expectativa de corte de juros</h3>
+              <p class="data">Cenário econômico</p>
+
+              <div class="text">
+                <p>
+                  Indicadores recentes apontam desaceleração da inflação no Brasil, o que reforça a expectativa de que o Banco Central
+                  avalie cortes na taxa de juros em algum momento, dependendo do cenário. Quando a inflação perde força, o custo do crédito
+                  pode começar a recuar, mas isso depende também de fatores como câmbio, política fiscal e comportamento de alimentos e energia.
+                </p>
+                <p>
+                  Para a economia real, juros menores podem estimular consumo e investimento, mas o BC costuma agir com cautela para evitar
+                  que a inflação volte a acelerar. Por isso, cada dado novo influencia projeções e expectativa do mercado.
+                </p>
+                <p>
+                  Para o cidadão, o assunto aparece em financiamentos, cartão, parcelas e preços do dia a dia. A discussão sobre juros é,
+                  no fundo, um equilíbrio: controlar inflação sem travar demais a atividade econômica.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- EVENTOS: somente como notícia com link direto -->
+          <article class="card article" data-filter="eventos curitiba shows setembro 2025 agenda cultura">
+            <div class="thumb">
+              <img src="imagens/show--sintonia--porqueira.jpg" alt="Eventos e shows em Curitiba">
+            </div>
+
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Cultura</span>
+                <span>Setembro de 2025</span>
+              </div>
+
+              <h3>Grandes shows agitam Curitiba em setembro</h3>
+              <p class="data">Agenda cultural</p>
+
+              <div class="text">
+                <p>
+                  Setembro será um mês intenso em Curitiba, com apresentações nacionais e internacionais em palcos icônicos.
+                  A Sintonia reuniu os principais destaques e a agenda completa para você se programar, comprar ingresso e
+                  não perder os eventos mais aguardados do mês.
+                </p>
+                <p>
+                  Entre os nomes confirmados, há shows em locais como Arena da Baixada, Teatro Positivo e Ópera de Arame,
+                  além de apresentações que misturam estilos e públicos diferentes — do pop ao samba.
+                </p>
+                <p>
+                  <a class="btn" href="evento-shows.html">Abrir a agenda completa</a>
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="box">
+            <h3>Dica rápida</h3>
+            <p>Use a busca para filtrar por palavras: “Brasil”, “Mundo”, “Economia”, “Cultura”, “drones”…</p>
+          </div>
+
+          <div class="box" style="margin-top:12px;">
+            <h3>Sugira uma pauta</h3>
+            <p>Achou algo importante? Manda pra gente e a Sintonia publica.</p>
+            <a class="btn" href="contatos.html" style="margin-top:10px;">Falar com a redação</a>
+          </div>
+        </aside>
       </div>
-    </article>
-
-    <!-- (Mantive o restante igual ao seu original, mas se você quiser,
-         eu posso também reescrever tudo em um padrão único e mais “revista”) -->
-
-    <article class="noticia-card">
-      <img src="imagens/chinna-guerra.jpeg" alt="Caças" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Japão acusa China de colocar seus caças na mira em nova escalada militar</h3>
-        <p class="data">Dezembro de 2025</p>
-        <p>O governo do Japão acusou caças chineses...</p>
-      </div>
-    </article>
-
-    <article class="noticia-card">
-      <img src="imagens/otan--br.webp" alt="OTAN" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>EUA estabelecem 2027 como prazo para Europa liderar defesa da OTAN</h3>
-        <p class="data">Dezembro de 2025</p>
-        <p>Autoridades do Pentágono definiram 2027...</p>
-      </div>
-    </article>
-
-    <article class="noticia-card">
-      <img src="imagens/fla-liberta.webp" alt="Libertadores" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Flamengo é tetracampeão da Libertadores e se isola como brasileiro com mais títulos</h3>
-        <p class="data">29 de novembro de 2025 - Lima (PER)</p>
-        <p>O Flamengo escreveu mais um capítulo histórico...</p>
-      </div>
-    </article>
-
-    <article class="noticia-card">
-      <img src="imagens/show--sintonia--porqueira.jpg" alt="Shows" class="img-noticia">
-      <div class="conteudo-noticia">
-        <h3>Grandes Shows agitam Curitiba em setembro</h3>
-        <p class="data">Setembro de 2025</p>
-        <p>Confira a programação completa de shows.</p>
-        <a href="evento-shows.html" class="btn-leia-mais">Ler mais</a>
-      </div>
-    </article>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Revista Sintonia - Todos os direitos reservados.</p>
+    <div class="container footer-inner">
+      <div>© 2025 Revista Sintonia</div>
+      <div class="small">Notícias completas • Tema escuro • Mobile-first</div>
+    </div>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
