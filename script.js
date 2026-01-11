@@ -28,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+if (window.innerWidth <= 520 && navbar) {
+  navbar.classList.add("active"); // garante menu visível
+}

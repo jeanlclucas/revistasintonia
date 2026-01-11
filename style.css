@@ -699,3 +699,51 @@ footer {
     font-size: 14px;
   }
 }
+
+
+@media (max-width: 520px) {
+
+  /* Esconde o botão hambúrguer no celular */
+  .menu-toggle {
+    display: none !important;
+  }
+
+  /* Menu SEMPRE aparecendo */
+  .menu {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;         /* se faltar espaço, rola pro lado */
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 0 !important;
+  }
+
+  /* Remove o comportamento de abrir/fechar */
+  .navbar.active .menu {
+    display: flex !important;
+  }
+
+  /* Links mais compactos e alinhados */
+  .menu a {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    padding: 10px 12px !important;
+    border-radius: 999px !important;     /* estilo “pill” */
+    font-size: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  /* Nav mais organizado no mobile */
+  .nav-inner {
+    justify-content: center !important;
+  }
+
+  /* Evita que o menu empurre/bugue o layout */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+}
