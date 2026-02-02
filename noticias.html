@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- TOPO -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
@@ -23,7 +24,7 @@
 
       <div class="search">
         <form id="search-form">
-          <input id="search-input" type="text" placeholder="Buscar manchetes (ex: Brasil, Mundo, Economia)..." aria-label="Buscar manchetes">
+          <input id="search-input" type="text" placeholder="Buscar manchetes..." aria-label="Buscar">
           <button type="submit">Buscar</button>
         </form>
       </div>
@@ -34,10 +35,10 @@
     </div>
   </header>
 
+  <!-- NAV -->
   <nav class="navbar">
     <div class="container nav-inner">
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <ul class="menu" id="menu">
+      <ul class="menu">
         <li><a href="index.html">Início</a></li>
         <li><a class="active" href="noticias.html">Notícias</a></li>
         <li><a href="sobre.html">Sobre</a></li>
@@ -46,218 +47,149 @@
     </div>
   </nav>
 
+  <!-- DESTAQUES -->
   <section class="breaking">
     <div class="container breaking-inner">
       <span class="breaking-tag">DESTAQUE</span>
-      <span class="breaking-text">Agora as matérias aparecem completas (sem cortar). Use a busca para filtrar.</span>
+      <span class="breaking-text">
+        Janeiro Branco • Jogos de Inverno 2026 • Tomb Raider
+      </span>
     </div>
   </section>
 
   <main>
     <div class="container">
       <div class="news-page">
-        <!-- FEED COMPLETO -->
+
+        <!-- FEED -->
         <section class="news-feed">
 
-          <!-- 1 -->
-          <article class="card article" data-filter="mundo russia missil hipersonico polonia ucrania janeiro 2026 conflito europa">
-            <div class="thumb">
-              <img src="imagens/img-10-01/missel-hiper.png" alt="Míssil hipersônico - ilustração">
-            </div>
+          <!-- ================= DESTAQUES (NOVAS NOTÍCIAS) ================= -->
 
+          <!-- JANEIRO BRANCO -->
+          <article class="card article">
+            <div class="thumb">
+              <img src="imagens/img-10-01/janiero--branco.png" alt="Ataque com míssil hipersônico">
+            </div>
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Brasil</span>
+                <span>Janeiro</span>
+              </div>
+              <h3>Janeiro Branco reforça a importância da saúde mental e do bem-estar emocional</h3>
+              <div class="text">
+                <p>
+                  O Janeiro Branco é uma campanha nacional voltada à promoção da saúde mental,
+                  incentivando o diálogo, o autocuidado e o combate a estigmas associados aos
+                  transtornos emocionais.
+                </p>
+                <p>
+                  Instituída pela Lei nº 14.556/2023, a campanha transforma janeiro em um convite
+                  para reflexões coletivas e individuais sobre equilíbrio emocional e qualidade
+                  de vida.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- JOGOS DE INVERNO -->
+          <article class="card article">
+            <div class="thumb">
+              <img src="imagens/img-10-01/jogos--inverno.png" alt="Ataque com míssil hipersônico">
+            </div>
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Mundo</span>
+                <span>Fevereiro de 2026</span>
+              </div>
+              <h3>Jogos Olímpicos de Inverno 2026 prometem edição histórica na Itália</h3>
+              <div class="text">
+                <p>
+                  Milão e regiões dos Alpes italianos receberão cerca de 3.500 atletas de quase
+                  100 países em mais de 110 provas, unindo esporte, inovação e diversidade.
+                </p>
+                <p>
+                  O Brasil marcará presença em modalidades como snowboard, esqui alpino e bobsled,
+                  mantendo sua trajetória crescente nos Jogos de Inverno.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- TOMB RAIDER -->
+          <article class="card article">
+            <div class="thumb">
+              <img src="imagens/img-10-01/jogo-lara.png" alt="Ataque com míssil hipersônico">
+            </div>
+            <div class="card-body">
+              <div class="meta">
+                <span class="chip">Games</span>
+                <span>2026 • 2027</span>
+              </div>
+              <h3>Novo Tomb Raider promete respeitar o legado e renovar a franquia</h3>
+              <div class="text">
+                <p>
+                  Legacy of Atlantis será uma releitura moderna das origens de Lara Croft, enquanto
+                  Catalyst trará uma proposta inédita à franquia, com lançamentos previstos entre
+                  2026 e 2027.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= NOTÍCIAS ANTIGAS ================= -->
+
+          <article class="card article">
+            <div class="thumb">
+              <img src="imagens/img-10-01/missel-hiper.png" alt="Ataque com míssil hipersônico">
+            </div>
             <div class="card-body">
               <div class="meta">
                 <span class="chip">Mundo</span>
                 <span>Janeiro de 2026</span>
               </div>
-
               <h3>Rússia usa míssil hipersônico em ataque perto da fronteira com a Polônia</h3>
-              <p class="data">Atualização internacional</p>
-
               <div class="text">
                 <p>
-                  Um ataque atribuído à Rússia atingiu a região oeste da Ucrânia, em área próxima à fronteira com a Polônia,
-                  país integrante da OTAN. O episódio chamou atenção por envolver armamento descrito como hipersônico,
-                  um tipo de míssil que costuma reduzir o tempo de reação das defesas e aumentar o nível de alerta.
-                </p>
-                <p>
-                  Autoridades ucranianas relataram danos em estruturas e acionamento de sistemas de defesa aérea,
-                  enquanto governos europeus reforçaram a preocupação com o risco de escalada e efeitos colaterais
-                  do conflito em territórios vizinhos. Mesmo quando um ataque não cruza fronteiras, a proximidade com
-                  países da OTAN costuma gerar cautela diplomática e militar.
-                </p>
-                <p>
-                  Para o público, o impacto é direto no cenário global: o conflito pressiona custos de energia,
-                  altera rotas comerciais e influencia decisões de segurança e orçamento em diversos países. A tendência,
-                  segundo analistas, é que a tensão continue alta, com episódios pontuais elevando a instabilidade na região.
+                  O ataque elevou o nível de alerta na Europa e reacendeu debates sobre escalada
+                  militar e segurança regional.
                 </p>
               </div>
             </div>
           </article>
 
-          <!-- 2 -->
-          <article class="card article" data-filter="mundo filipinas avalanche lixo aterro resgate sinais de vida janeiro 2026 desastre">
+          <article class="card article">
             <div class="thumb">
-              <img src="imagens/img-10-01/avalanche-lixo.png" alt="Avalanche de lixo - resgate">
+              <img src="imagens/img-10-01/avalanche-lixo.png" alt="Avalanche de lixo nas Filipinas">
             </div>
-
             <div class="card-body">
               <div class="meta">
                 <span class="chip">Mundo</span>
                 <span>Janeiro de 2026</span>
               </div>
-
               <h3>Filipinas: equipes detectam sinais de vida após avalanche de lixo em aterro</h3>
-              <p class="data">Resgate e emergência</p>
-
               <div class="text">
                 <p>
-                  Equipes de resgate nas Filipinas informaram ter detectado sinais de vida sob os destroços depois que uma
-                  avalanche de lixo atingiu um aterro sanitário, soterrando pessoas e deixando mortos, feridos e desaparecidos.
-                  O trabalho é considerado delicado porque a área permanece instável, com risco de novos deslizamentos.
-                </p>
-                <p>
-                  Operações desse tipo costumam envolver escavação cuidadosa e reforço estrutural para evitar que o terreno ceda.
-                  Enquanto isso, familiares aguardam informações e equipes médicas são mobilizadas para atendimento emergencial.
-                </p>
-                <p>
-                  O caso reacende uma discussão que vai além do resgate: como cidades gerenciam resíduos, como aterros são fiscalizados
-                  e quais medidas de segurança existem para proteger trabalhadores. Em muitos países, crescimento urbano acelerado e
-                  infraestrutura defasada aumentam o risco de tragédias como essa.
+                  O resgate ocorre em meio a riscos estruturais e reacende o debate sobre gestão
+                  de resíduos e segurança urbana.
                 </p>
               </div>
             </div>
           </article>
 
-          <!-- 3 -->
-          <article class="card article" data-filter="economia ue mercosul irlanda agricultores protesto comercio janeiro 2026 brasil exportacao acordo">
+          <article class="card article">
             <div class="thumb">
-              <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto de agricultores - Irlanda">
+              <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto na Irlanda">
             </div>
-
             <div class="card-body">
               <div class="meta">
                 <span class="chip">Economia</span>
                 <span>Janeiro de 2026</span>
               </div>
-
               <h3>Agricultores irlandeses protestam contra acordo UE–Mercosul</h3>
-              <p class="data">Comércio internacional</p>
-
               <div class="text">
                 <p>
-                  Agricultores na Irlanda realizaram protestos contra o acordo comercial entre a União Europeia e o Mercosul.
-                  O principal argumento do setor é que a abertura comercial pode aumentar a entrada de produtos agrícolas
-                  mais baratos no mercado europeu, pressionando a renda de produtores locais e elevando a competição.
-                </p>
-                <p>
-                  Do lado europeu, críticos também citam preocupações com padrões sanitários, regras ambientais e rastreabilidade.
-                  Já defensores do acordo afirmam que ele pode ampliar oportunidades para exportações e reduzir custos em cadeias
-                  produtivas, dependendo de como as regras serão implementadas.
-                </p>
-                <p>
-                  Para o Mercosul — incluindo o Brasil — o assunto é estratégico: envolve exportações, negociações políticas e
-                  requisitos de qualidade. Quando protestos ganham força na Europa, a tramitação do acordo pode ficar mais lenta,
-                  criando incerteza para setores que esperam ampliar mercado.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="card article" data-filter="mundo coreia do norte coreia do sul drones tensao janeiro 2026 seguranca peninsula">
-            <div class="thumb">
-              <img src="imagens/img-10-01/coreia.png" alt="Coreia - drones e tensão">
-            </div>
-
-            <div class="card-body">
-              <div class="meta">
-                <span class="chip">Mundo</span>
-                <span>Janeiro de 2026</span>
-              </div>
-
-              <h3>Coreia do Norte ameaça resposta após acusar o Sul de incursões com drones</h3>
-              <p class="data">Tensão na península</p>
-
-              <div class="text">
-                <p>
-                  A Coreia do Norte acusou a Coreia do Sul de violar seu território com drones e afirmou que responderá às ações,
-                  elevando a tensão em uma das regiões mais sensíveis do cenário internacional. Em episódios assim, os dois lados
-                  costumam trocar acusações e reforçar discursos de defesa e soberania.
-                </p>
-                <p>
-                  Incursões envolvendo drones são especialmente delicadas porque combinam tecnologia de vigilância, coleta de dados e,
-                  em alguns casos, capacidade de ataque. Mesmo quando há negação oficial ou investigação em andamento, o atrito tende
-                  a crescer por causa do histórico de confrontos e do risco de escalada.
-                </p>
-                <p>
-                  Para o mundo, o tema importa porque qualquer instabilidade ali repercute em mercados, diplomacia e segurança no Leste Asiático.
-                  A comunidade internacional costuma acompanhar com cautela e buscar redução do risco de incidentes militares.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="card article" data-filter="brasil economia inflacao juros selic janeiro 2026 banco central ipca">
-            <div class="thumb">
-              <img src="imagens/img-10-01/inflacao-br.png" alt="Inflação no Brasil - ilustração">
-            </div>
-
-            <div class="card-body">
-              <div class="meta">
-                <span class="chip">Brasil</span>
-                <span>Janeiro de 2026</span>
-              </div>
-
-              <h3>Brasil: inflação desacelera e reforça expectativa de corte de juros</h3>
-              <p class="data">Cenário econômico</p>
-
-              <div class="text">
-                <p>
-                  Indicadores recentes apontam desaceleração da inflação no Brasil, o que reforça a expectativa de que o Banco Central
-                  avalie cortes na taxa de juros em algum momento, dependendo do cenário. Quando a inflação perde força, o custo do crédito
-                  pode começar a recuar, mas isso depende também de fatores como câmbio, política fiscal e comportamento de alimentos e energia.
-                </p>
-                <p>
-                  Para a economia real, juros menores podem estimular consumo e investimento, mas o BC costuma agir com cautela para evitar
-                  que a inflação volte a acelerar. Por isso, cada dado novo influencia projeções e expectativa do mercado.
-                </p>
-                <p>
-                  Para o cidadão, o assunto aparece em financiamentos, cartão, parcelas e preços do dia a dia. A discussão sobre juros é,
-                  no fundo, um equilíbrio: controlar inflação sem travar demais a atividade econômica.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- EVENTOS: somente como notícia com link direto -->
-          <article class="card article" data-filter="eventos curitiba shows setembro 2025 agenda cultura">
-            <div class="thumb">
-              <img src="imagens/show--sintonia--porqueira.jpg" alt="Eventos e shows em Curitiba">
-            </div>
-
-            <div class="card-body">
-              <div class="meta">
-                <span class="chip">Cultura</span>
-                <span>Setembro de 2025</span>
-              </div>
-
-              <h3>Grandes shows agitam Curitiba em setembro</h3>
-              <p class="data">Agenda cultural</p>
-
-              <div class="text">
-                <p>
-                  Setembro será um mês intenso em Curitiba, com apresentações nacionais e internacionais em palcos icônicos.
-                  A Sintonia reuniu os principais destaques e a agenda completa para você se programar, comprar ingresso e
-                  não perder os eventos mais aguardados do mês.
-                </p>
-                <p>
-                  Entre os nomes confirmados, há shows em locais como Arena da Baixada, Teatro Positivo e Ópera de Arame,
-                  além de apresentações que misturam estilos e públicos diferentes — do pop ao samba.
-                </p>
-                <p>
-                  <a class="btn" href="evento-shows.html">Abrir a agenda completa</a>
+                  Produtores temem impactos econômicos e aumento da concorrência no mercado europeu.
                 </p>
               </div>
             </div>
@@ -269,15 +201,16 @@
         <aside class="sidebar">
           <div class="box">
             <h3>Dica rápida</h3>
-            <p>Use a busca para filtrar por palavras: “Brasil”, “Mundo”, “Economia”, “Cultura”, “drones”…</p>
+            <p>Use a busca para filtrar por Brasil, Mundo, Games ou Economia.</p>
           </div>
 
           <div class="box" style="margin-top:12px;">
             <h3>Sugira uma pauta</h3>
-            <p>Achou algo importante? Manda pra gente e a Sintonia publica.</p>
-            <a class="btn" href="contatos.html" style="margin-top:10px;">Falar com a redação</a>
+            <p>Achou algo importante? Envie para a redação.</p>
+            <a class="btn" href="contatos.html">Falar com a redação</a>
           </div>
         </aside>
+
       </div>
     </div>
   </main>
@@ -285,7 +218,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© 2025 Revista Sintonia</div>
-      <div class="small">Notícias completas • Tema escuro • Mobile-first</div>
+      <div class="small">Portal de notícias • Mobile-first</div>
     </div>
   </footer>
 </body>

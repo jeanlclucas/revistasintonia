@@ -747,3 +747,24 @@ footer {
     z-index: 20;
   }
 }
+
+/* =========================
+   FIX HOME: imagens sempre encaixadas
+   ========================= */
+.hero-media,
+.list-item .thumb {
+  overflow: hidden;
+}
+
+.hero-media img,
+.list-item .thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* garante altura boa no desktop e mobile */
+.hero-media { min-height: 320px; }
+@media (max-width: 640px) { .hero-media { min-height: 240px; } }

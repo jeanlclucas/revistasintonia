@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sintonia - Portal</title>
+  <title>Sintonia - Início</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
+
+  <!-- TOPO -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
@@ -17,28 +19,20 @@
         </div>
         <div class="brand-title">
           <h1>Revista Sintonia</h1>
-          <p>Portal de notícias • cultura • tendências</p>
+          <p>Notícias • Cultura • Brasil e Mundo</p>
         </div>
       </div>
 
-      <div class="search">
-        <form id="search-form">
-          <input id="search-input" type="text" placeholder="Buscar no Sintonia..." aria-label="Buscar">
-          <button type="submit">Buscar</button>
-        </form>
-      </div>
-
       <div class="actions">
-        <span class="badge">SINTONIA</span>
+        <span class="badge">PORTAL DE NOTÍCIAS</span>
       </div>
     </div>
   </header>
 
-  <!-- MENU (sem Eventos) -->
+  <!-- NAV -->
   <nav class="navbar">
     <div class="container nav-inner">
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <ul class="menu" id="menu">
+      <ul class="menu" style="display:flex;">
         <li><a class="active" href="index.html">Início</a></li>
         <li><a href="noticias.html">Notícias</a></li>
         <li><a href="sobre.html">Sobre</a></li>
@@ -47,138 +41,97 @@
     </div>
   </nav>
 
+  <!-- DESTAQUES -->
   <section class="breaking">
     <div class="container breaking-inner">
-      <span class="breaking-tag">AGORA</span>
-      <span class="breaking-text">Manchetes do Brasil e do mundo com texto completo e visual profissional.</span>
+      <span class="breaking-tag">DESTAQUES</span>
+      <span class="breaking-text">Saúde mental • Olimpíadas de Inverno • Games</span>
     </div>
   </section>
 
   <main>
     <div class="container">
-      <div class="section-title">
-        <h2>Destaque principal</h2>
-        <a href="noticias.html">Ver todas as notícias</a>
-      </div>
 
       <section class="grid-home">
-        <!-- HERO -->
+
+        <!-- NOTÍCIA PRINCIPAL -->
         <article class="card hero">
           <div class="hero-media">
-            <!-- IMAGEM REAL (sem borda) -->
-            <img src="imagens/img-10-01/missel-hiper.png" alt="Ataque com míssil - ilustração">
+            <!-- ✅ IMAGEM DIRETA (sem placeholder) -->
+            <img src="imagens/img-10-01/janiero--branco.png" alt="Janeiro Branco">
           </div>
 
           <div class="hero-body">
             <div class="meta">
-              <span class="chip">Mundo</span>
-              <span>Janeiro de 2026</span>
+              <span class="chip">Brasil</span>
+              <span>Janeiro</span>
             </div>
 
-            <h3>Rússia usa míssil hipersônico em ataque perto da fronteira com a Polônia</h3>
+            <h3>Janeiro Branco reforça a importância da saúde mental e do bem-estar emocional</h3>
+
             <p>
-              A ação elevou o nível de alerta na região e reforçou preocupações sobre escalada do conflito e impactos
-              indiretos em países vizinhos.
+              Campanha nacional chama atenção para o cuidado com a saúde emocional,
+              combate estigmas e incentiva o diálogo e o autocuidado como pilares
+              fundamentais para uma sociedade mais saudável.
             </p>
 
-            <a class="btn" href="noticias.html">Ler matéria completa</a>
+            <a href="noticias.html" class="btn">Ler matéria completa</a>
           </div>
         </article>
 
-        <!-- LATERAL: em alta -->
-        <aside class="card">
-          <div class="card-body">
-            <div class="meta">
-              <span class="chip">Em alta</span>
-              <span>Hoje</span>
+        <!-- SIDEBAR DESTAQUES -->
+        <aside class="list">
+
+          <!-- JOGOS DE INVERNO -->
+          <article class="list-item">
+            <div class="thumb">
+              <!-- ✅ IMAGEM DIRETA (sem div extra) -->
+              <img src="imagens/img-10-01/jogos--inverno.png" alt="Jogos de Inverno 2026">
             </div>
-
-            <div class="list" style="margin-top:12px;">
-              <a class="list-item" href="noticias.html">
-                <div class="thumb">
-                  <img src="imagens/img-10-01/avalanche-lixo.png" alt="Resgate após avalanche de lixo">
-                </div>
-                <div>
-                  <h4>Filipinas: sinais de vida após avalanche de lixo</h4>
-                  <p>Mundo • Emergência</p>
-                </div>
-              </a>
-
-              <a class="list-item" href="noticias.html">
-                <div class="thumb">
-                  <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto de agricultores na Irlanda">
-                </div>
-                <div>
-                  <h4>Irlanda protesta contra acordo UE–Mercosul</h4>
-                  <p>Economia • Comércio</p>
-                </div>
-              </a>
-
-              <a class="list-item" href="noticias.html">
-                <div class="thumb">
-                  <img src="imagens/img-10-01/inflacao-br.png" alt="Indicadores de inflação no Brasil">
-                </div>
-                <div>
-                  <h4>Brasil: inflação desacelera e mercado mira juros</h4>
-                  <p>Brasil • Economia</p>
-                </div>
-              </a>
+            <div>
+              <h4>Jogos Olímpicos de Inverno 2026 prometem edição histórica na Itália</h4>
+              <p>Mundo • Fevereiro de 2026</p>
             </div>
+          </article>
 
-            <a class="btn" href="contatos.html" style="margin-top:14px;">Enviar sugestão de pauta</a>
-          </div>
+          <!-- TOMB RAIDER -->
+          <article class="list-item">
+            <div class="thumb">
+              <!-- ✅ IMAGEM DIRETA (sem div extra) -->
+              <img src="imagens/img-10-01/jogo-lara.png" alt="Tomb Raider">
+            </div>
+            <div>
+              <h4>Novo Tomb Raider promete respeitar o legado e renovar a franquia</h4>
+              <p>Games • 2026 / 2027</p>
+            </div>
+          </article>
+
         </aside>
       </section>
 
-      <!-- DESTAQUES SECUNDÁRIOS -->
-      <div class="section-title" style="margin-top:16px;">
-        <h2>Mais destaques</h2>
-        <a href="noticias.html">Ir para Notícias</a>
-      </div>
-
-      <section class="news-feed" style="gap: 12px;">
-        <article class="card article" style="padding:12px;">
-          <div class="thumb">
-            <img src="imagens/img-10-01/coreia.png" alt="Tensão na Coreia - drones">
-          </div>
-          <div class="card-body">
-            <div class="meta">
-              <span class="chip">Mundo</span>
-              <span>Janeiro de 2026</span>
-            </div>
-            <h3>Coreia do Norte ameaça resposta após acusar o Sul de incursões com drones</h3>
-            <p>
-              O episódio amplia a tensão na península coreana e reacende o alerta sobre incidentes militares na região.
-            </p>
-            <a class="btn" href="noticias.html">Ler mais</a>
-          </div>
-        </article>
-
-        <article class="card article" style="padding:12px;">
-          <div class="thumb">
-            <img src="imagens/img-10-01/protesto-irlanda.png" alt="Protesto UE–Mercosul">
-          </div>
-          <div class="card-body">
-            <div class="meta">
-              <span class="chip">Economia</span>
-              <span>Janeiro de 2026</span>
-            </div>
-            <h3>UE–Mercosul: agricultores protestam e acordo volta ao centro do debate</h3>
-            <p>
-              Pressão política na Europa pode impactar o andamento do acordo e gerar incerteza para setores exportadores.
-            </p>
-            <a class="btn" href="noticias.html">Ler mais</a>
-          </div>
-        </article>
+      <!-- CHAMADA -->
+      <section class="card" style="margin-top:16px;">
+        <div class="card-body">
+          <h3>Veja todas as notícias</h3>
+          <p>
+            Acompanhe a cobertura completa da Sintonia com notícias do Brasil,
+            do mundo, economia, cultura e entretenimento.
+          </p>
+          <a href="noticias.html" class="btn">Ir para Notícias</a>
+        </div>
       </section>
+
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
       <div>© 2025 Revista Sintonia</div>
-      <div class="small">Tema escuro • Mobile-first • Imagens ajustadas</div>
+      <div class="small">Portal de notícias • Mobile-first</div>
     </div>
   </footer>
+
 </body>
 </html>
+
